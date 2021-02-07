@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+
+   <h3> All our products</h3>
+      <p>Now you can shop all product lists</p>
+
+      {% for pd in product %}
+        <div class="card" style="width:300px">
+
+
+          <img class="card-img-top" src="{{ pd.imageurl }}" width="300" >
+          <div class="card-body">
+          <h1 class="card-title">{{ pd.name}}</h1>
+          <p>{{pd.price}}</p>
+          <p>{{pd.detail}}</p>
+
+        </div>
+      </div>
+          <hr><br>
+
+      {% endfor %}
+ 
+  {% endblock content %}
